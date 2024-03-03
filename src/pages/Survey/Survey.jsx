@@ -43,9 +43,9 @@ const Survey = () => {
 
   const checkAnswer = (question, answer) => {
     const correctAnswers = {
-      question1: "correct_answer",
-      question2: "correct_answer",
-      question3: "correct_answer"
+      question1: "Benar",
+      question2: "Benar",
+      question3: "Benar"
     };
 
     return correctAnswers[question] === answer;
@@ -64,10 +64,6 @@ const Survey = () => {
     ) {
       alert("Please fill in all the fields");
     } else {
-
-      console.log("Form Data:", formData); // Log form data
-      console.log("Questionnaire Data:", questionnaire); // Log questionnaire data
-      console.log("Total Points:", questionnaire.totalPoints); // Log total points
 
       const calories = parseInt(formData.weight) * 100;
       const proteinCalories = ((parseInt(formData.weight)* 100 )* 0.2) / 4; 
@@ -184,46 +180,79 @@ const Survey = () => {
                  {/* Question 1 */}
                 <div className="mb-3">
                   <Form.Label>Stunting adalah kondisi gagal tumbuh pada si kecil karena kurangnya asupan gizi yang seimbang, penyakit infeksi yang berulang dan kondisi sosial ekonomi.</Form.Label>
-                  <Form.Control
-                    as="select"
-                    name="question1"
-                    value={questionnaire.question1}
-                    onChange={(e) => handleQuestionnaireAnswer("question1", e.target.value)}
-                  >
-                    <option value="">Pilih Jawaban</option>
-                    <option value="correct_answer">Benar</option>
-                    <option value="wrong_answer">Salah</option>
-                  </Form.Control>
+                  <div>
+                    <Form.Check
+                      type="radio"
+                      id="question1-benar"
+                      name="question1"
+                      value="Benar"
+                      label="Benar"
+                      checked={questionnaire.question1 === "Benar"}
+                      onChange={(e) => handleQuestionnaireAnswer("question1", e.target.value)}
+                    />
+                    <Form.Check
+                      className="mb-4"
+                      type="radio"
+                      id="question1-salah"
+                      name="question1"
+                      value="Salah"
+                      label="Salah"
+                      checked={questionnaire.question1 === "Salah"}
+                      onChange={(e) => handleQuestionnaireAnswer("question1", e.target.value)}
+                    />
+                  </div>
                 </div>
 
                 {/* Question 2 */}
                 <div className="mb-3">
                   <Form.Label>Berikut adalah contoh protein hewani : Ayam, Ikan, Telur, Daging Sapi dan Daging Ayam</Form.Label>
-                  <Form.Control
-                    as="select"
-                    name="question2"
-                    value={questionnaire.question2}
-                    onChange={(e) => handleQuestionnaireAnswer("question2", e.target.value)}
-                  >
-                    <option value="">Pilih Jawaban</option>
-                    <option value="correct_answer">Benar</option>
-                    <option value="wrong_answer">Salah</option>
-                  </Form.Control>
+                  <div>
+                    <Form.Check
+                      type="radio"
+                      id="question2-benar"
+                      name="question2"
+                      value="Benar"
+                      label="Benar"
+                      checked={questionnaire.question2 === "Benar"}
+                      onChange={(e) => handleQuestionnaireAnswer("question2", e.target.value)}
+                    />
+                    <Form.Check
+                      className="mb-4"
+                      type="radio"
+                      id="question2-salah"
+                      name="question2"
+                      value="Salah"
+                      label="Salah"
+                      checked={questionnaire.question2 === "Salah"}
+                      onChange={(e) => handleQuestionnaireAnswer("question2", e.target.value)}
+                    />
+                  </div>
                 </div>
 
                 {/* Question 3 */}
                 <div className="mb-3">
                   <Form.Label>Akibat dari stunting adalah: tinggi badan anak pendek, anak mudah terkena penyakit dan terhambatnya perkembangan otak</Form.Label>
-                  <Form.Control
-                    as="select"
-                    name="question3"
-                    value={questionnaire.question3}
-                    onChange={(e) => handleQuestionnaireAnswer("question3", e.target.value)}
-                  >
-                    <option value="">Pilih Jawaban</option>
-                    <option value="correct_answer">Benar</option>
-                    <option value="wrong_answer">Salah</option>
-                  </Form.Control>
+                  <div>
+                    <Form.Check
+                      type="radio"
+                      id="question3-benar"
+                      name="question3"
+                      value="Benar"
+                      label="Benar"
+                      checked={questionnaire.question3 === "Benar"}
+                      onChange={(e) => handleQuestionnaireAnswer("question3", e.target.value)}
+                    />
+                    <Form.Check
+                      className="mb-4"
+                      type="radio"
+                      id="question3-salah"
+                      name="question3"
+                      value="Salah"
+                      label="Salah"
+                      checked={questionnaire.question3 === "Salah"}
+                      onChange={(e) => handleQuestionnaireAnswer("question3", e.target.value)}
+                    />
+                  </div>
                 </div>
                 <div className="d-flex justify-content-center mt-5">
                   <Button type="submit" variant="dark" style={{ width: "200px" }}>Lanjut</Button>
