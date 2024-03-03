@@ -60,7 +60,6 @@ const Survey = () => {
       formData.age === "" ||
       formData.height === "" ||
       formData.weight === "" ||
-      formData.energy === "" ||
       Object.values(questionnaire).some(answer => answer === "")
     ) {
       alert("Please fill in all the fields");
@@ -180,20 +179,6 @@ const Survey = () => {
                   type="number"
                 />
                 <InputGroup.Text id="basic-addon2">kg</InputGroup.Text>
-              </InputGroup>
-            </div>
-            <div>
-              <Form.Label>Kebutuhan Energi : </Form.Label>
-              <InputGroup className="mb-3">
-                <Form.Control
-                  name="energy"
-                  value={formData.energy}
-                  onChange={handleInputChange}
-                  aria-label="Recipient's username"
-                  aria-describedby="basic-addon2"
-                  type="number"
-                />
-                <InputGroup.Text id="basic-addon2">kkal</InputGroup.Text>
               </InputGroup>
             </div>
                  {/* Question 1 */}

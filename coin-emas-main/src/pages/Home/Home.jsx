@@ -41,7 +41,7 @@ const Home = () => {
         <div className="row justify-content-center">
           <div className="col-md-6 text-center p-4">
             <h5 className="p-3">Made By</h5>
-            <img src={ownerImage} alt="Owner" className="img-thumbnail" style={{ width: "130px" }} />
+            <img src={ownerImage} alt="Owner" className="img-thumbnail" style={{ width: "220px" }} />
             <h4 className="p-3"> Gati Dwi Cahyani Amd.Gz</h4>
             <p>Supported By</p>
             <p>RSUD Kramat Jati Jakarta Timur</p>

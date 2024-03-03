@@ -50,9 +50,9 @@
               <tbody>
                 <tr>
                   <td>{calories} kkal</td>
-                  <td>{Math.round(proteinCalories)} gr</td>
+                  <td>{proteinCalories} gr</td>
                   <td>{Math.round(lemakCalories)} gr</td>
-                  <td>{Math.round(carboCalories)} gr</td>
+                  <td>{carboCalories} gr</td>
                 </tr>
               </tbody>
             </Table>
@@ -75,8 +75,8 @@
                 <tr>
                 <td>{Math.round(proteinCalories / 7)} porsi</td>
                 <td>{Math.round(proteinCalories / 7)} porsi</td>
-                <td>{Math.round(proteinCalories / 10)} porsi</td>
-                <td>{Math.round(proteinCalories / 10)} porsi</td>
+                <td>{(proteinCalories / 10)} porsi</td>
+                <td>{(proteinCalories / 10)} porsi</td>
                 </tr>
               </tbody>
             </Table>
